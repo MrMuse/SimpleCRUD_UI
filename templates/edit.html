@@ -1,0 +1,26 @@
+//templates/edit.html
+{% extends "layout.html" %}
+{% block body %}
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update/{{todo.id}}" method="POST">
+          <div class="form-group">
+            <input type="date" name="date" value="{{todo.fname}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="time" name="time" value="{{todo.lname}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="note" value="{{todo.email}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
